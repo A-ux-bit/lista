@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class Telacadastrocomputador extends Telacadastro {
-
+public class TelaCadastroComputador extends TelaCadastro {
     private String campoCpu;
     private String campoRam;
     private String campoSoftware;
@@ -37,6 +36,4 @@ public class Telacadastrocomputador extends Telacadastro {
         //inputComputador.close();
     }
 
-
-    
 }
