@@ -5,17 +5,18 @@ import java.util.Scanner;
 
 public class ControleCadastroComputador {
     private ArrayList<Computador> arraycomputador = new ArrayList<Computador>();
-    public ControleCadastroComputador(){
-        TelaCadastroComputador telacadastrocomputador = 
-        new TelaCadastroComputador();    
+    public void cadastroComputador(){
+        TelaCadastroComputador telacadastrocomputador = new TelaCadastroComputador();    
         Computador computador = new Computador();
-        ArrayList<Computador> arraycomputador = new ArrayList<Computador>();
         Scanner input = new Scanner(System.in);
-        
         do{
         
         telacadastrocomputador.desenhaTelacadastroComputador();
-        
+        computador.setId(telacadastrocomputador.getId());
+        computador.setModelo(telacadastrocomputador.getModelo());
+        computador.setFornecedor(telacadastrocomputador.getFornecedor());
+        //computador.setDataaquisicao(telacadastrocomputador.getDataAquisicao());
+        computador.setAtivo(telacadastrocomputador.getAtivo());
         computador.setCpu(telacadastrocomputador.getCampoCpu());
         computador.setRam(telacadastrocomputador.getCampoRam());;
         computador.setSoftware(telacadastrocomputador.getCampoSoftware());
@@ -26,7 +27,7 @@ public class ControleCadastroComputador {
         } while(input.nextLine().equals("S")||input.nextLine().equals("s"));
     
     }
-    public ArrayList<Computador> geArraycComputadors(){
+    public ArrayList<Computador> getArrayComputador(){
       return this.arraycomputador;
 }
 }
