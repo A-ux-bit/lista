@@ -9,6 +9,30 @@ public class TelaCadastro {
     private Date dataAquisicao;
     private Boolean ativo;
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    public void setDataAquisicao(Date dataAquisicao) {
+        this.dataAquisicao = dataAquisicao;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
+
     public String getId(){
         return this.id;
     }
@@ -47,7 +71,12 @@ public class TelaCadastro {
         System.out.print("A data de aquisicao:");
         this.dataAquisicao = Date.valueOf(input.nextLine());
         System.out.print("Status do produto:");
-        this.ativo = Boolean.parseBoolean(input.nextLine());
+        if (input.nextLine().equals("S")){
+            this.setAtivo(true);
+        }
+        else if(input.nextLine().equals("N")) {
+            this.setAtivo(false);
+        }
     }
     
 }
