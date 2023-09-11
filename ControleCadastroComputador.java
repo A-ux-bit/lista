@@ -4,29 +4,29 @@ import java.util.Scanner;
 
 
 public class ControleCadastroComputador {
-    private ArrayList<computador> arraycomputador = new ArrayList<computador>();
+    private ArrayList<Computador> arraycomputador = new ArrayList<Computador>();
     public ControleCadastroComputador(){
-        Telacadastrocomputador telacadastrocomputador = 
-        new Telacadastrocomputador();    
-        computador computadors = new computador();
-        ArrayList<computador> Arraycomputadors = new ArrayList<computador>();
+        TelaCadastroComputador telacadastrocomputador = 
+        new TelaCadastroComputador();    
+        Computador computador = new Computador();
+        ArrayList<Computador> arraycomputador = new ArrayList<Computador>();
         Scanner input = new Scanner(System.in);
         
         do{
         
         telacadastrocomputador.desenhaTelacadastroComputador();
         
-        computadors.setCpu(telacadastrocomputador.getCampoCpu());
-        computadors.setRam(telacadastrocomputador.getCampoRam());;
-        computadors.setSoftware(telacadastrocomputador.getCampoSoftware());
+        computador.setCpu(telacadastrocomputador.getCampoCpu());
+        computador.setRam(telacadastrocomputador.getCampoRam());;
+        computador.setSoftware(telacadastrocomputador.getCampoSoftware());
         
-        this.arraycomputador.add(computadors);
+        this.arraycomputador.add(computador);
         System.out.println("Deseja continuar [S/N]");
 
         } while(input.nextLine().equals("S")||input.nextLine().equals("s"));
     
     }
-    public ArrayList<computador> geArraycComputadors(){
+    public ArrayList<Computador> geArraycComputadors(){
       return this.arraycomputador;
 }
 }
