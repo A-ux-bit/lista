@@ -1,8 +1,7 @@
 import java.sql.Date;
 import java.util.Scanner;
 
-public class Telacadastro{
-
+public class TelaCadastro {
     private String id;
     private String nome;
     private String modelo;
@@ -50,4 +49,5 @@ public class Telacadastro{
         System.out.print("Status do produto:");
         this.ativo = Boolean.parseBoolean(input.nextLine());
     }
+    
 }
