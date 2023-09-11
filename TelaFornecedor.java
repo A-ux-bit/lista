@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Telafornecedor extends TelaJuridica{
+public class TelaFornecedor extends TelaJuridica{
     private String campoProduto;
     private String descricaoproduto;
 
