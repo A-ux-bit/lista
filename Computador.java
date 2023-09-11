@@ -1,4 +1,4 @@
-public class computador extends Equipamento{
+public class Computador extends Equipamento{
 
     private String cpu;
     private String ram;
