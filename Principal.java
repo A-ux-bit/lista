@@ -2,8 +2,8 @@ public class Principal{
 
      public static void main(String[] args){
 
-        //new ControleCadastroComputador();
-        new ControleMenuPrincipal();
+        
+        new ControleMenuPrincipal().chamarControleMenuPrincipal();
      }
         
     }
