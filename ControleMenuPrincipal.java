@@ -4,31 +4,32 @@ import java.util.Scanner;
 
 public class ControleMenuPrincipal {
 
-    public ControleMenuPrincipal (){
+    private ArrayList<Computador> computadores;
+
+    public void chamarControleMenuPrincipal (){
          Scanner input = new Scanner(System.in);
          ControleCadastroComputador controleCadastroComputador = new ControleCadastroComputador();
          {
             new TelaMenuPrincipal();
-           // ControleCadastroComputador controleCadastroComputador = new ControleCadastroComputador();
 
             switch (Integer.parseInt(input.nextLine())) {
             case 1:
             controleCadastroComputador.cadastroComputador();
-            controleCadastroComputador.getArrayComputador().forEach((comp) -> System.out.println(comp));
+            computadores = controleCadastroComputador.getArrayComputador();
             new ControleMenuPrincipal();
-           //controleCadastroComputador.getArrayComputador().foreah((comp))
+            this.chamarControleMenuPrincipal();
             break;
 
             case 2:
-            //controleCadastroComputador.getArrayComputador().forEach((comp) -> System.out.println(comp));
-            //new ControleMenuPrincipal();
+            computadores.forEach((comp) -> System.out.println(comp));
+            this.chamarControleMenuPrincipal();
             break;
             case 3:
             System.exit(0);
             break;
         
             default:
-            new ControleMenuPrincipal();
+            this.chamarControleMenuPrincipal();
                 break;
         }
         
